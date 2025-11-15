@@ -15,6 +15,7 @@ import {
   Users,
   Award
 } from 'lucide-react';
+import Footer from '../components/Footer';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -33,10 +34,6 @@ const LandingPage = () => {
     {
       text: "First, solve the problem. Then, write the code.",
       author: "John Johnson"
-    },
-    {
-      text: "Experience is the name everyone gives to their mistakes.",
-      author: "Oscar Wilde"
     }
   ];
 
@@ -234,17 +231,7 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="landing-footer">
-        <div className="landing-footer-content">
-          <div className="footer-brand">
-            <Sparkles size={24} />
-            <span>DevGuide+</span>
-          </div>
-          <p className="footer-text">
-            © {new Date().getFullYear()} DevGuide+. Empowering developers worldwide.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
