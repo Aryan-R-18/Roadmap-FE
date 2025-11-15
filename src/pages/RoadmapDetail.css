@@ -1,0 +1,306 @@
+.roadmap-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.roadmap-detail-header {
+  margin-bottom: 3rem;
+}
+
+.header-content {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.header-content > p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.progress-section {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.progress-bar-large {
+  width: 100%;
+  height: 12px;
+  background-color: var(--bg-tertiary);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-fill-large {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #7c3aed 100%);
+  transition: width 0.5s ease;
+}
+
+.progress-percentage {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-secondary, .btn-danger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.roadmap-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.meta-section {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.meta-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.meta-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meta-section li {
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.meta-section li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.topics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.topic-section {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.topic-header h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.level-badge {
+  padding: 0.375rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.subtopics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subtopic-item {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: border-color 0.2s;
+}
+
+.subtopic-item:hover {
+  border-color: var(--accent);
+}
+
+.subtopic-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.checkbox-btn:hover {
+  color: var(--accent);
+}
+
+.checkbox-btn.checked {
+  color: var(--success);
+}
+
+.subtopic-header span {
+  flex: 1;
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.note-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.note-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.note-section textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.note-section textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.save-note-btn {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-note-btn:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.save-note-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .roadmap-detail-container {
+    padding: 1rem;
+  }
+  
+  .header-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .roadmap-meta {
+    grid-template-columns: 1fr;
+  }
+  
+  .topic-section {
+    padding: 1.25rem;
+  }
+  
+  .topic-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .subtopic-item {
+    padding: 1rem;
+  }
+}
