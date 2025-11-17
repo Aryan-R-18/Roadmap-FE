@@ -34,7 +34,7 @@
   display: inline-flex;
   align-items: center;
   gap: 1.5rem;
-  background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #3b82f6 100%);
   color: white;
   padding: 1.5rem 3rem;
   border-radius: 1rem;
@@ -47,6 +47,7 @@
 }
 
 .stats-card p {
+  color: #ffffff;
   margin: 0;
   opacity: 0.9;
 }
@@ -154,7 +155,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent) 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, #4b4b4b 100%);
   transition: width 0.3s ease;
 }
 

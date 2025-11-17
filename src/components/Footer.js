@@ -19,7 +19,7 @@ const Footer = () => {
             </p>
             <div className="footer-social">
               <a 
-                href="https://github.com/ArnR" 
+                href="https://github.com/Aryan-R-18" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/ArnR" 
+                href="https://www.linkedin.com/in/aryan-rajguru-a1333230a/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -77,13 +77,12 @@ const Footer = () => {
             <ul className="footer-links">
               <li>
                 <a 
-                  href="https://github.com/ArnR/cs-roadmap-hub" 
+                  href="https://www.iitkirba.xyz/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-link"
                 >
-                  <Github size={16} />
-                  GitHub Repository
+                  Notes and PYQs
                 </a>
               </li>
               <li>
@@ -98,12 +97,12 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://github.com/ArnR/cs-roadmap-hub/blob/main/README.md" 
+                  href="https://www.hackmnc.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-link"
                 >
-                  Documentation
+                  Practice
                 </a>
               </li>
             </ul>
@@ -115,7 +114,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li>
                 <a 
-                  href="https://github.com/ArnR" 
+                  href="https://github.com/Aryan-R-18" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-link"
@@ -126,7 +125,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://linkedin.com/in/ArnR" 
+                  href="https://www.linkedin.com/in/aryan-rajguru-a1333230a/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-link"
@@ -137,7 +136,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:contact@arnr.dev" 
+                  href="mailto:arnvk71@gmail.com" 
                   className="footer-link"
                 >
                   <Mail size={16} />
