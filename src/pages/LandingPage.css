@@ -93,7 +93,7 @@
 
 /* Main Title */
 .hero-main-title {
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
   margin: 0;
@@ -849,7 +849,7 @@
   }
 
   .hero-main-title {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: 2.5rem;
   }
 
   .hero-description {
