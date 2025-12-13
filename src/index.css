@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Dark theme as default */
+
 :root {
   --bg-primary: #1a1a1a;
   --bg-secondary: #2d2d2d;
@@ -20,7 +20,7 @@
   --warning: #f59e0b;
 }
 
-/* Improved light theme */
+
 [data-theme="light"] {
   --bg-primary: #fafafa;
   --bg-secondary: #ffffff;
@@ -51,7 +51,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Scrollbar Styling */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -69,7 +69,7 @@ code {
   background: var(--text-secondary);
 }
 
-/* Animations */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -84,7 +84,7 @@ code {
 .fade-in {
   animation: fadeIn 0.3s ease-in;
 }
-/* Enhanced shadows and borders for better visual hierarchy */
+
 :root {
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -103,7 +103,7 @@ code {
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Improved scrollbar for light theme */
+
 [data-theme="light"] ::-webkit-scrollbar-track {
   background: #f9fafb;
 }
@@ -114,14 +114,14 @@ code {
 
 [data-theme="light"] ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
-}/
+}
 * Enhanced body styling for better visual appeal */
 [data-theme="light"] body {
   background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
   background-attachment: fixed;
 }
 
-/* Improved focus states */
+
 [data-theme="light"] *:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

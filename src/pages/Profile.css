@@ -1,4 +1,4 @@
-/* Profile Page Styles */
+
 .profile-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -6,7 +6,7 @@
   min-height: calc(100vh - 140px);
 }
 
-/* Animations */
+
 .fade-in {
   animation: fadeIn 0.6s ease-in-out;
 }
@@ -22,7 +22,7 @@
   }
 }
 
-/* Profile Header */
+
 .profile-header {
   display: flex;
   gap: 2rem;
@@ -169,7 +169,7 @@
   font-size: 0.95rem;
 }
 
-/* Theme Settings */
+
 .theme-settings {
   background: var(--bg-secondary);
   border-radius: 16px;
@@ -211,7 +211,7 @@
   border-color: var(--accent);
 }
 
-/* Section Titles */
+
 .section-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -222,7 +222,6 @@
   gap: 0.5rem;
 }
 
-/* Stats Overview */
 .stats-overview {
   margin-bottom: 3rem;
 }
@@ -338,7 +337,7 @@
   color: var(--text-primary);
 }
 
-/* Top Roadmaps */
+
 .top-roadmaps {
   margin-bottom: 3rem;
 }
@@ -600,7 +599,7 @@
   color: var(--text-secondary);
 }
 
-/* Quick Actions */
+
 .quick-actions {
   margin-bottom: 2rem;
 }
@@ -638,7 +637,7 @@
   text-align: center;
 }
 
-/* Loading */
+
 .loading-container {
   display: flex;
   justify-content: center;
@@ -648,7 +647,7 @@
   color: var(--text-secondary);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .profile-container {
     padding: 1rem;
@@ -711,8 +710,8 @@
     gap: 1rem;
     align-items: stretch;
   }
-}/* 
-Account Settings */
+}
+
 .account-settings {
   margin-bottom: 2rem;
 }
@@ -760,7 +759,7 @@ Account Settings */
   color: #ef4444;
 }
 
-/* Toggle Switch */
+
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -824,7 +823,7 @@ input:checked + .toggle-slider:before {
   background: #dc2626;
 }
 
-/* Additional responsive adjustments */
+
 @media (max-width: 768px) {
   .setting-item {
     flex-direction: column;
@@ -866,8 +865,7 @@ input:checked + .toggle-slider:before {
 
 .warning-btn:hover {
   background: #d97706; }
-/* Le
-arning Goals */
+
 .learning-goals {
   margin-bottom: 3rem;
 }

@@ -3,7 +3,7 @@
   background-color: var(--bg-primary);
 }
 
-/* Hero Section */
+
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -55,7 +55,6 @@
   gap: 3rem;
 }
 
-/* Hero Badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -91,7 +90,7 @@
   color: var(--accent-secondary);
 }
 
-/* Main Title */
+
 .hero-main-title {
   font-size: 4rem;
   font-weight: 700;
@@ -112,7 +111,7 @@
   animation: gradientShift 3s ease-in-out infinite;
 }
 
-/* Description */
+
 .hero-description {
   font-size: 1.25rem;
   color: var(--text-secondary);
@@ -123,7 +122,7 @@
   font-weight: 500;
 }
 
-/* Hero Buttons */
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -173,7 +172,7 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Hero Mockup */
+
 .hero-mockup {
   position: relative;
   margin-top: 3rem;
@@ -352,7 +351,7 @@
   text-align: center;
 }
 
-/* Hero Glow Effect */
+
 .hero-glow {
   position: absolute;
   top: 50%;
@@ -379,7 +378,7 @@
 
 
 
-/* Stats Section */
+
 .stats-section {
   padding: 4rem 2rem;
   background-color: var(--bg-secondary);
@@ -429,7 +428,7 @@
   font-weight: 500;
 }
 
-/* Quotes Section */
+
 .quotes-section {
   padding: 5rem 2rem;
   background-color: var(--bg-primary);
@@ -505,7 +504,7 @@
   text-align: right;
 }
 
-/* Domains Section */
+
 .domains-section {
   padding: 5rem 2rem;
   background-color: var(--bg-secondary);
@@ -734,7 +733,7 @@
   transform: translateY(-2px);
 }
 
-/* Animations */
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -757,7 +756,7 @@
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .brand-name {
     font-size: 2.5rem;
@@ -832,7 +831,7 @@
     font-size: 1.5rem;
   }
 }
-/* Responsive Design for Hero Section */
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 90vh;
@@ -923,8 +922,7 @@
   .mockup-title {
     font-size: 0.75rem;
   }
-}/* He
-ro section grid pattern for different themes */
+}
 [data-theme="light"] .hero-section::before {
   background-image: 
     linear-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px),
@@ -935,7 +933,7 @@ ro section grid pattern for different themes */
   background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
 }
 
-/* Floating grid animation for hero section */
+
 .hero-section::before {
   animation: heroGridFloat 25s ease-in-out infinite;
 }

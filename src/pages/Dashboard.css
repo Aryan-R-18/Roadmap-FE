@@ -245,9 +245,9 @@
     grid-template-columns: 1fr;
   }
 }
-/* Completely disable tooltips on roadmap cards */
+
 .roadmap-card {
-  /* Disable any browser tooltip behavior */
+  
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -255,11 +255,11 @@
 }
 
 .roadmap-card[title=""] {
-  /* Ensure empty title doesn't show tooltip */
+
   pointer-events: auto;
 }
 
-/* Disable any potential CSS tooltips */
+
 .roadmap-card::before,
 .roadmap-card::after,
 .progress-text::before,

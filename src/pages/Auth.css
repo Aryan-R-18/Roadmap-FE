@@ -157,7 +157,7 @@
     font-size: 1.5rem;
   }
 }
-/* Enhanced grid pattern for different themes */
+
 [data-theme="light"] .auth-container::before {
   background-image: 
     linear-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px),
@@ -168,7 +168,7 @@
   background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
 }
 
-/* Floating elements for visual interest */
+
 .auth-container::before {
   animation: gridFloat 20s ease-in-out infinite;
 }
@@ -188,7 +188,7 @@
   }
 }
 
-/* Enhanced form styling */
+
 .form-group input {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(59, 130, 246, 0.4);
@@ -212,14 +212,14 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Enhanced error message */
+
 .error-message {
   background: rgba(239, 68, 68, 0.15);
   border: 1px solid rgba(239, 68, 68, 0.4);
   color: #ffffff;
 }
 
-/* Improved responsive design */
+
 @media (max-width: 768px) {
   .auth-container {
     padding: 1rem;
@@ -235,7 +235,7 @@
   }
 }
 
-/* Theme-specific transparency */
+
 [data-theme="light"] .auth-card {
   background: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(59, 130, 246, 0.4);
@@ -251,12 +251,12 @@
   color: rgba(31, 41, 55, 0.7);
 }
 
-/* Dark theme specific */
+
 [data-theme="dark"] .form-group input::placeholder {
   color: rgba(248, 249, 250, 0.6);
 }
 
-/* Enhanced glass morphism effect */
+
 .auth-card::before {
   content: '';
   position: absolute;
@@ -267,8 +267,8 @@
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 50%, rgba(59, 130, 246, 0.05) 100%);
   border-radius: var(--border-radius-xl);
   z-index: -1;
-}/*
- Dark theme specific */
+}
+
 [data-theme="dark"] .form-group input::placeholder {
   color: rgba(248, 249, 250, 0.7);
 }
