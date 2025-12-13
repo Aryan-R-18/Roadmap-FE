@@ -836,8 +836,9 @@ input:checked + .toggle-slider:before {
   .setting-item .danger-btn {
     align-self: flex-end;
   }
-}.
-export-btn {
+}
+
+.export-btn {
   background: var(--accent);
   color: white;
   border: none;
