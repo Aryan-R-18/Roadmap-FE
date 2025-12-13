@@ -18,6 +18,18 @@
   margin-bottom: 3rem;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-text {
+  flex: 1;
+  text-align: left;
+}
+
 .dashboard-header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -27,7 +39,29 @@
 .dashboard-header p {
   color: var(--text-secondary);
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin: 0;
+}
+
+.profile-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-xl);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-btn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .stats-card {
@@ -58,14 +92,16 @@
   gap: 1rem;
   background-color: var(--bg-secondary);
   padding: 1rem 1.5rem;
-  border-radius: 0.75rem;
+  border-radius: var(--border-radius-lg);
   margin-bottom: 3rem;
-  border: 2px solid var(--border-color);
-  transition: border-color 0.2s;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .search-bar:focus-within {
   border-color: var(--accent);
+  box-shadow: var(--shadow-md);
 }
 
 .search-bar input {
@@ -118,17 +154,18 @@
 
 .roadmap-card {
   background-color: var(--bg-secondary);
-  border: 2px solid var(--border-color);
-  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
   padding: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .roadmap-card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .roadmap-card h3 {
@@ -177,8 +214,23 @@
     padding: 1rem;
   }
   
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+  
   .dashboard-header h1 {
     font-size: 1.75rem;
+  }
+  
+  .profile-btn {
+    align-self: center;
+    width: fit-content;
   }
   
   .stats-card {
@@ -192,4 +244,26 @@
   .roadmap-grid {
     grid-template-columns: 1fr;
   }
+}
+/* Completely disable tooltips on roadmap cards */
+.roadmap-card {
+  /* Disable any browser tooltip behavior */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.roadmap-card[title=""] {
+  /* Ensure empty title doesn't show tooltip */
+  pointer-events: auto;
+}
+
+/* Disable any potential CSS tooltips */
+.roadmap-card::before,
+.roadmap-card::after,
+.progress-text::before,
+.progress-text::after {
+  display: none !important;
+  content: none !important;
 }

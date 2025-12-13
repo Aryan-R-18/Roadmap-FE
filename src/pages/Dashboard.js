@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { BookOpen, Code, TrendingUp, Search } from 'lucide-react';
+import { BookOpen, Code, TrendingUp, Search, User } from 'lucide-react';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -77,8 +77,13 @@ const Dashboard = () => {
       <Navbar />
       <div className="dashboard-container">
         <div className="dashboard-header fade-in">
-          <h1>Your Learning Dashboard</h1>
-          <p>Track your progress and continue your journey</p>
+          <div className="header-content">
+            <div className="header-text">
+              <h1>Your Learning Dashboard</h1>
+              <p>Track your progress and continue your journey</p>
+            </div>
+            
+          </div>
           
           <div className="stats-card">
             <TrendingUp size={32} />
@@ -114,6 +119,7 @@ const Dashboard = () => {
                   key={roadmap.id}
                   className="roadmap-card"
                   onClick={() => navigate(`/roadmap/${roadmap.id}`)}
+                  title=""
                 >
                   <h3>{roadmap.title}</h3>
                   <p>{roadmap.description}</p>
@@ -146,6 +152,7 @@ const Dashboard = () => {
                   key={roadmap.id}
                   className="roadmap-card"
                   onClick={() => navigate(`/roadmap/${roadmap.id}`)}
+                  title=""
                 >
                   <h3>{roadmap.title}</h3>
                   <p>{roadmap.description}</p>

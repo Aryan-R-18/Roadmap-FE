@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
-import { Moon, Sun, LogOut, Home } from 'lucide-react';
+import { Moon, Sun, LogOut, Home, User } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,6 +25,10 @@ const Navbar = () => {
         
         <div className="navbar-actions">
           <span className="user-name">Hi, {user?.name}</span>
+          
+          <button className="icon-btn" onClick={() => navigate('/profile')} title="View Profile">
+            <User size={20} />
+          </button>
           
           <button className="icon-btn" onClick={toggleTheme} title="Toggle theme">
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}

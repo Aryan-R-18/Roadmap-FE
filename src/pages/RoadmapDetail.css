@@ -60,7 +60,7 @@
   flex-wrap: wrap;
 }
 
-.btn-secondary, .btn-danger {
+.btn-secondary, .btn-danger, .btn-resources {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -89,6 +89,15 @@
 
 .btn-danger:hover {
   opacity: 0.9;
+}
+
+.btn-resources {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-resources:hover {
+  background-color: #059669;
 }
 
 .roadmap-meta {

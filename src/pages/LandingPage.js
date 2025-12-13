@@ -122,23 +122,93 @@ const LandingPage = () => {
       <section className="hero-section">
         <div className="hero-container">
           <div className="hero-content">
-            <div className="brand-logo">
-              <Sparkles className="sparkle-icon" size={32} />
-              <h1 className="brand-name">DevGuide+</h1>
+            {/* Badge */}
+            <div className="hero-badge">
+              <span className="badge-text">Welcome to your learning journey !</span>
+              <button className="badge-link" onClick={() => navigate('/register')}>
+                Get started
+                <ArrowRight size={12} />
+              </button>
             </div>
-            <h2 className="hero-title">Welcome to Your Learning Journey</h2>
-            <p className="hero-subtitle">
+
+            {/* Main Title */}
+            <h1 className="hero-main-title">
+              DevGuide
+              <span className="title-gradient">+</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="hero-description">
               Your comprehensive guide to mastering Computer Science Engineering.
               Track progress, take notes, and level up your skills across 32+ roadmaps.
             </p>
+
+            {/* Buttons */}
             <div className="hero-buttons">
-              <button className="btn-primary-large" onClick={() => navigate('/register')}>
+              <button className="btn-primary-hero" onClick={() => navigate('/register')}>
                 Get Started Free
                 <ArrowRight size={20} />
               </button>
-              <button className="btn-secondary-large" onClick={() => navigate('/login')}>
+              <button className="btn-secondary-hero" onClick={() => navigate('/login')}>
+                <Sparkles size={16} />
                 Sign In
               </button>
+            </div>
+
+            {/* Mockup/Visual Element */}
+            <div className="hero-mockup">
+              <div className="mockup-frame">
+                <div className="mockup-content">
+                  <div className="mockup-header">
+                    <div className="mockup-dots">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <div className="mockup-title">DevGuide+ Dashboard</div>
+                  </div>
+                  <div className="mockup-body">
+                    <div className="mockup-sidebar">
+                      <div className="sidebar-item active">
+                        <BookOpen size={16} />
+                        <span>Dashboard</span>
+                      </div>
+                      <div className="sidebar-item">
+                        <Code size={16} />
+                        <span>Roadmaps</span>
+                      </div>
+                      <div className="sidebar-item">
+                        <TrendingUp size={16} />
+                        <span>Progress</span>
+                      </div>
+                    </div>
+                    <div className="mockup-main">
+                      <div className="progress-card">
+                        <div className="progress-header">Overall Progress</div>
+                        <div className="progress-bar">
+                          <div className="progress-fill"></div>
+                        </div>
+                        <div className="progress-text">67% Complete</div>
+                      </div>
+                      <div className="roadmap-cards">
+                        <div className="roadmap-card-mini">
+                          <div className="card-icon" style={{ backgroundColor: '#3b82f6' }}>
+                            <Code size={14} />
+                          </div>
+                          <div className="card-title">Web Development</div>
+                        </div>
+                        <div className="roadmap-card-mini">
+                          <div className="card-icon" style={{ backgroundColor: '#10b981' }}>
+                            <Brain size={14} />
+                          </div>
+                          <div className="card-title">Machine Learning</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="hero-glow"></div>
             </div>
           </div>
         </div>

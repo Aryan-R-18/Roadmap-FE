@@ -4,16 +4,46 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: #2d2d2d;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 1;
+}
+
+.auth-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  z-index: 2;
 }
 
 .auth-card {
-  background-color: var(--bg-primary);
-  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: var(--border-radius-xl);
   padding: 3rem;
   width: 100%;
   max-width: 450px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 10;
 }
 
 .auth-header {
@@ -126,4 +156,124 @@
   .auth-header h1 {
     font-size: 1.5rem;
   }
+}
+/* Enhanced grid pattern for different themes */
+[data-theme="light"] .auth-container::before {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+}
+
+[data-theme="light"] .auth-container::after {
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+}
+
+/* Floating elements for visual interest */
+.auth-container::before {
+  animation: gridFloat 20s ease-in-out infinite;
+}
+
+@keyframes gridFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-5px, 10px);
+  }
+  75% {
+    transform: translate(-10px, -5px);
+  }
+}
+
+/* Enhanced form styling */
+.form-group input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Enhanced error message */
+.error-message {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+}
+
+/* Improved responsive design */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1rem;
+  }
+  
+  .auth-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .auth-container::before {
+    background-size: 30px 30px;
+  }
+}
+
+/* Theme-specific transparency */
+[data-theme="light"] .auth-card {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+[data-theme="light"] .form-group input {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .form-group input::placeholder {
+  color: rgba(31, 41, 55, 0.7);
+}
+
+/* Dark theme specific */
+[data-theme="dark"] .form-group input::placeholder {
+  color: rgba(248, 249, 250, 0.6);
+}
+
+/* Enhanced glass morphism effect */
+.auth-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 50%, rgba(59, 130, 246, 0.05) 100%);
+  border-radius: var(--border-radius-xl);
+  z-index: -1;
+}/*
+ Dark theme specific */
+[data-theme="dark"] .form-group input::placeholder {
+  color: rgba(248, 249, 250, 0.7);
+}
+
+[data-theme="light"] .error-message {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--text-primary);
 }

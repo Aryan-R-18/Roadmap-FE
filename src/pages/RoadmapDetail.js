@@ -10,7 +10,8 @@ import {
   Circle, 
   Save, 
   RotateCcw,
-  CheckCheck 
+  CheckCheck,
+  BookOpen
 } from 'lucide-react';
 import './RoadmapDetail.css';
 
@@ -170,6 +171,12 @@ const RoadmapDetail = () => {
             </div>
 
             <div className="action-buttons">
+              {roadmap.category === 'non-academic' && roadmap.resources && (
+                <button className="btn-resources" onClick={() => navigate(`/resources/${id}`)}>
+                  <BookOpen size={18} />
+                  View Resources
+                </button>
+              )}
               <button className="btn-secondary" onClick={markAllComplete}>
                 <CheckCheck size={18} />
                 Mark All Complete

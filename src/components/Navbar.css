@@ -5,6 +5,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-container {
@@ -48,15 +50,16 @@
   color: var(--text-primary);
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
 }
 
 .icon-btn:hover {
   background-color: var(--bg-tertiary);
+  transform: translateY(-1px);
 }
 
 .logout-btn:hover {

@@ -11,7 +11,7 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -19,7 +19,7 @@ export const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
   };
 
   const value = {
