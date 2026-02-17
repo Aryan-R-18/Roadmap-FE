@@ -171,7 +171,7 @@ const RoadmapDetail = () => {
             </div>
 
             <div className="action-buttons">
-              {roadmap.category === 'non-academic' && roadmap.resources && (
+              {roadmap.resources && (
                 <button className="btn-resources" onClick={() => navigate(`/resources/${id}`)}>
                   <BookOpen size={18} />
                   View Resources

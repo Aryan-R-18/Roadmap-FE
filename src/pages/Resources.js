@@ -13,7 +13,8 @@ import {
   User,
   ExternalLink,
   BookOpen,
-  Video
+  Video,
+  FileQuestion
 } from 'lucide-react';
 import './Resources.css';
 
@@ -25,6 +26,7 @@ const Resources = () => {
   const [activeTab, setActiveTab] = useState('notes');
   const [loading, setLoading] = useState(true);
   const [selectedPdf, setSelectedPdf] = useState(null);
+  const [isAcademic, setIsAcademic] = useState(false);
 
   useEffect(() => {
     fetchRoadmap();
@@ -33,7 +35,12 @@ const Resources = () => {
   const fetchRoadmap = async () => {
     try {
       const response = await axios.get(`${API_URL}/roadmaps/${id}`);
-      setRoadmap(response.data);
+      const roadmapData = response.data;
+      setRoadmap(roadmapData);
+      
+      // Check if roadmap is academic (has PYQs)
+      const hasAcademicResources = roadmapData.resources && roadmapData.resources.pyqs && roadmapData.resources.pyqs.length > 0;
+      setIsAcademic(hasAcademicResources);
     } catch (error) {
       console.error('Failed to fetch roadmap:', error);
     } finally {
@@ -112,6 +119,16 @@ const Resources = () => {
                 Notes & PDFs
                 <span className="tab-count">({roadmap.resources.notes?.length || 0})</span>
               </button>
+              {isAcademic && (
+                <button 
+                  className={`tab ${activeTab === 'pyqs' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('pyqs')}
+                >
+                  <FileQuestion size={20} />
+                  PYQs
+                  <span className="tab-count">({roadmap.resources.pyqs?.length || 0})</span>
+                </button>
+              )}
               <button 
                 className={`tab ${activeTab === 'videos' ? 'active' : ''}`}
                 onClick={() => setActiveTab('videos')}
@@ -184,6 +201,78 @@ const Resources = () => {
                           <button 
                             className="download-btn"
                             onClick={() => handleDownload(note.url, note.title)}
+                          >
+                            <Download size={16} />
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {activeTab === 'pyqs' && (
+            <div className="pyqs-section">
+              {selectedPdf ? (
+                <div className="pdf-viewer">
+                  <div className="pdf-viewer-header">
+                    <button 
+                      className="close-pdf-btn"
+                      onClick={() => setSelectedPdf(null)}
+                    >
+                      <ArrowLeft size={20} />
+                      Back to PYQs
+                    </button>
+                    <button 
+                      className="download-btn"
+                      onClick={() => {
+                        const pyq = roadmap.resources.pyqs.find(p => p.url === selectedPdf);
+                        handleDownload(selectedPdf, pyq?.title || 'document');
+                      }}
+                    >
+                      <Download size={20} />
+                      Download PDF
+                    </button>
+                  </div>
+                  <iframe
+                    src={selectedPdf}
+                    title="PDF Viewer"
+                    className="pdf-iframe"
+                  />
+                </div>
+              ) : (
+                <div className="pyqs-grid">
+                  {roadmap.resources.pyqs?.map((pyq, index) => (
+                    <div key={pyq.id} className="pyq-card fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                      <div className="pyq-icon">
+                        <FileQuestion size={32} />
+                      </div>
+                      <div className="pyq-content">
+                        <h3 className="pyq-title">{pyq.title}</h3>
+                        <p className="pyq-description">{pyq.description}</p>
+                        <div className="pyq-meta">
+                          <span className="pyq-year">
+                            <Clock size={16} />
+                            {pyq.year}
+                          </span>
+                          <span className="pyq-type">{pyq.type.toUpperCase()}</span>
+                        </div>
+                      </div>
+                      <div className="pyq-actions">
+                        <button 
+                          className="view-btn"
+                          onClick={() => handlePdfView(pyq.url)}
+                        >
+                          <ExternalLink size={16} />
+                          View PDF
+                        </button>
+                        {pyq.downloadable && (
+                          <button 
+                            className="download-btn"
+                            onClick={() => handleDownload(pyq.url, pyq.title)}
                           >
                             <Download size={16} />
                             Download
